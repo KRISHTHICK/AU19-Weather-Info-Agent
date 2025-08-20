@@ -32,3 +32,21 @@ Tool → hits OpenWeatherMap API → gets weather
 Agent → saves response in memory + returns to UI
 
 👉 This is end-to-end (UI + agent + tool + API + memory).
+
+# 🌦️ Weather Agent (Live + Mock)
+Simple Streamlit agent that fetches weather for a city. Works in **Live** mode (OpenWeatherMap) or **Mock** mode (no API needed).
+
+## Run
+1. `pip install -r requirements.txt`
+2. (Optional) Add `.env` with `OPENWEATHER_API_KEY=...` for Live mode.
+3. `streamlit run app.py`
+
+## Use
+- Toggle **Mock Mode** in the sidebar.
+- Enter city → get weather.
+- Memory log shows the conversation.
+
+## Notes
+- If no API key is found, the app auto-falls back to **Mock Mode**.
+- Mock Mode is deterministic per city name.
+
